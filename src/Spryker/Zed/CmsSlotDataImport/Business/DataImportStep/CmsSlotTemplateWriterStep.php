@@ -21,19 +21,11 @@ class CmsSlotTemplateWriterStep implements DataImportStepInterface
      */
     protected $utilTextService;
 
-    /**
-     * @param \Spryker\Zed\CmsSlotDataImport\Dependency\Service\CmsSlotDataImportToUtilTextServiceInterface $utilTextService
-     */
     public function __construct(CmsSlotDataImportToUtilTextServiceInterface $utilTextService)
     {
         $this->utilTextService = $utilTextService;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $cmsSlotTemplateEntity = SpyCmsSlotTemplateQuery::create()

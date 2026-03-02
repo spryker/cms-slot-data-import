@@ -18,11 +18,6 @@ use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
 
 class CmsSlotWriterStep extends PublishAwareStep implements DataImportStepInterface
 {
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $cmsSlotEntity = SpyCmsSlotQuery::create()

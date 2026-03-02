@@ -13,21 +13,11 @@ use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
 
 class CmsSlotMutatorDataStep implements DataImportStepInterface
 {
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $this->mutateIsActiveDataSetValue($dataSet);
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     protected function mutateIsActiveDataSetValue(DataSetInterface $dataSet): void
     {
         $dataSet[CmsSlotDataSetInterface::CMS_SLOT_IS_ACTIVE] = filter_var(

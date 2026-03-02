@@ -21,9 +21,6 @@ class CheckCmsSlotDataStep extends AbstractCheckDataStep implements DataImportSt
      */
     protected $cmsSlotFacade;
 
-    /**
-     * @param \Spryker\Zed\CmsSlotDataImport\Dependency\Facade\CmsSlotDataImportToCmsSlotFacadeInterface $cmsSlotFacade
-     */
     public function __construct(CmsSlotDataImportToCmsSlotFacadeInterface $cmsSlotFacade)
     {
         $this->cmsSlotFacade = $cmsSlotFacade;

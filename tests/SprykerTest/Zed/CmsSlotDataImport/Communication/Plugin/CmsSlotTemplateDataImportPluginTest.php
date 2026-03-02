@@ -32,9 +32,6 @@ class CmsSlotTemplateDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testCmsSlotTemplateImportPopulatesTable(): void
     {
         $this->tester->ensureSpyCmsSlotTemplateTableIsEmpty();
@@ -52,9 +49,6 @@ class CmsSlotTemplateDataImportPluginTest extends Unit
         $this->tester->assertSpyCmsSlotTemplateTableContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotTemplateImportWithInvalidDataThrowsException(): void
     {
         // Arrange

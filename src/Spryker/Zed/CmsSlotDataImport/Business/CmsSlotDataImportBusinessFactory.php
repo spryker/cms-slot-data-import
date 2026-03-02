@@ -27,9 +27,6 @@ use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
  */
 class CmsSlotDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCmsSlotDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getCmsSlotDataImporterConfiguration());
@@ -45,9 +42,6 @@ class CmsSlotDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCmsSlotTemplateDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getCmsSlotTemplateDataImporterConfiguration());
@@ -61,65 +55,41 @@ class CmsSlotDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCheckCmsSlotTemplateDataStep(): DataImportStepInterface
     {
         return new CheckCmsSlotTemplateDataStep($this->getCmsSlotFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCmsSlotTemplateWriterStep(): DataImportStepInterface
     {
         return new CmsSlotTemplateWriterStep($this->getUtilTextService());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCmsSlotMutatorDataStep(): DataImportStepInterface
     {
         return new CmsSlotMutatorDataStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCheckCmsSlotDataStep(): DataImportStepInterface
     {
         return new CheckCmsSlotDataStep($this->getCmsSlotFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createTemplatePathToCmsSlotTemplateIdStep(): DataImportStepInterface
     {
         return new TemplatePathToCmsSlotTemplateIdStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCmsSlotWriterStep(): DataImportStepInterface
     {
         return new CmsSlotWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotDataImport\Dependency\Facade\CmsSlotDataImportToCmsSlotFacadeInterface
-     */
     public function getCmsSlotFacade(): CmsSlotDataImportToCmsSlotFacadeInterface
     {
         return $this->getProvidedDependency(CmsSlotDataImportDependencyProvider::FACADE_CMS_SLOT);
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotDataImport\Dependency\Service\CmsSlotDataImportToUtilTextServiceInterface
-     */
     public function getUtilTextService(): CmsSlotDataImportToUtilTextServiceInterface
     {
         return $this->getProvidedDependency(CmsSlotDataImportDependencyProvider::SERVICE_UTIL_TEXT);

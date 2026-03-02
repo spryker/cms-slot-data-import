@@ -56,9 +56,6 @@ class CmsSlotDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . static::IMPORT_CMS_SLOT_TEMPLATE_FILE_NAME, static::IMPORT_TYPE_CMS_SLOT_TEMPLATE);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

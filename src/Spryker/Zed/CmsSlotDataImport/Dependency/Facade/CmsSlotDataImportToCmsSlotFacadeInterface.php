@@ -13,17 +13,7 @@ use Generated\Shared\Transfer\ValidationResponseTransfer;
 
 interface CmsSlotDataImportToCmsSlotFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotTransfer $cmsSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ValidationResponseTransfer
-     */
     public function validateCmsSlot(CmsSlotTransfer $cmsSlotTransfer): ValidationResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotTemplateTransfer $cmsSlotTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ValidationResponseTransfer
-     */
     public function validateCmsSlotTemplate(CmsSlotTemplateTransfer $cmsSlotTemplateTransfer): ValidationResponseTransfer;
 }

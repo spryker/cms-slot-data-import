@@ -21,11 +21,6 @@ class TemplatePathToCmsSlotTemplateIdStep implements DataImportStepInterface
      */
     protected $idCmsSlotTemplateCache;
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $dataSet[CmsSlotDataSetInterface::CMS_SLOT_TEMPLATE_ID] = $this->getIdCmsSlotTemplateByTemplatePath(

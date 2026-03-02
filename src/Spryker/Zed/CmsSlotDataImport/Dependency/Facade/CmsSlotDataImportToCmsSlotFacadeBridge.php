@@ -26,21 +26,11 @@ class CmsSlotDataImportToCmsSlotFacadeBridge implements CmsSlotDataImportToCmsSl
         $this->cmsSlotFacade = $cmsSlotFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotTransfer $cmsSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ValidationResponseTransfer
-     */
     public function validateCmsSlot(CmsSlotTransfer $cmsSlotTransfer): ValidationResponseTransfer
     {
         return $this->cmsSlotFacade->validateCmsSlot($cmsSlotTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotTemplateTransfer $cmsSlotTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ValidationResponseTransfer
-     */
     public function validateCmsSlotTemplate(CmsSlotTemplateTransfer $cmsSlotTemplateTransfer): ValidationResponseTransfer
     {
         return $this->cmsSlotFacade->validateCmsSlotTemplate($cmsSlotTemplateTransfer);
