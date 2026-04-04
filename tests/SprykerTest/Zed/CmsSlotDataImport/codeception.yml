@@ -19,3 +19,4 @@ suites:
                 - \SprykerTest\Shared\Testify\Helper\Environment
                 - \SprykerTest\Shared\Propel\Helper\TransactionHelper
                 - \SprykerTest\Zed\CmsSlotDataImport\Helper\CmsSlotDataImportHelper
+                - \SprykerTest\Shared\Testify\Helper\DependencyHelper
