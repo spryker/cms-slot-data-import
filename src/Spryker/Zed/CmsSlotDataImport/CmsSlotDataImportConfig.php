@@ -13,21 +13,29 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class CmsSlotDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_CMS_SLOT_FILE_NAME = 'cms_slot.csv';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_CMS_SLOT = 'cms-slot';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_CMS_SLOT_TEMPLATE_FILE_NAME = 'cms_slot_template.csv';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_CMS_SLOT_TEMPLATE = 'cms-slot-template';
